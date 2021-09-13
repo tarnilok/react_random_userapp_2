@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/react_random_userapp2/static/css/main.a617e044.chunk.css",
-    "main.js": "/react_random_userapp2/static/js/main.e66c6de2.chunk.js",
-    "main.js.map": "/react_random_userapp2/static/js/main.e66c6de2.chunk.js.map",
-    "runtime-main.js": "/react_random_userapp2/static/js/runtime-main.6461c03f.js",
-    "runtime-main.js.map": "/react_random_userapp2/static/js/runtime-main.6461c03f.js.map",
-    "static/js/2.73c8468b.chunk.js": "/react_random_userapp2/static/js/2.73c8468b.chunk.js",
-    "static/js/2.73c8468b.chunk.js.map": "/react_random_userapp2/static/js/2.73c8468b.chunk.js.map",
-    "static/js/3.24a7e632.chunk.js": "/react_random_userapp2/static/js/3.24a7e632.chunk.js",
-    "static/js/3.24a7e632.chunk.js.map": "/react_random_userapp2/static/js/3.24a7e632.chunk.js.map",
-    "index.html": "/react_random_userapp2/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/react_random_userapp2/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.73c8468b.chunk.js.LICENSE.txt": "/react_random_userapp2/static/js/2.73c8468b.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/react_random_userapp2/static/media/logo.6ce24c58.svg"
+    "main.css": "/react_random_userapp_2/static/css/main.ef0be8ac.chunk.css",
+    "main.js": "/react_random_userapp_2/static/js/main.363db1c0.chunk.js",
+    "main.js.map": "/react_random_userapp_2/static/js/main.363db1c0.chunk.js.map",
+    "runtime-main.js": "/react_random_userapp_2/static/js/runtime-main.5d34e7ed.js",
+    "runtime-main.js.map": "/react_random_userapp_2/static/js/runtime-main.5d34e7ed.js.map",
+    "static/js/2.cbf133f8.chunk.js": "/react_random_userapp_2/static/js/2.cbf133f8.chunk.js",
+    "static/js/2.cbf133f8.chunk.js.map": "/react_random_userapp_2/static/js/2.cbf133f8.chunk.js.map",
+    "static/js/3.0e69e306.chunk.js": "/react_random_userapp_2/static/js/3.0e69e306.chunk.js",
+    "static/js/3.0e69e306.chunk.js.map": "/react_random_userapp_2/static/js/3.0e69e306.chunk.js.map",
+    "index.html": "/react_random_userapp_2/index.html",
+    "static/css/main.ef0be8ac.chunk.css.map": "/react_random_userapp_2/static/css/main.ef0be8ac.chunk.css.map",
+    "static/js/2.cbf133f8.chunk.js.LICENSE.txt": "/react_random_userapp_2/static/js/2.cbf133f8.chunk.js.LICENSE.txt",
+    "static/media/cw.8221c6a7.svg": "/react_random_userapp_2/static/media/cw.8221c6a7.svg",
+    "static/media/design.7b0565e4.svg": "/react_random_userapp_2/static/media/design.7b0565e4.svg",
+    "static/media/growing-up-man.14fd1e78.svg": "/react_random_userapp_2/static/media/growing-up-man.14fd1e78.svg",
+    "static/media/growing-up-woman.227fa822.svg": "/react_random_userapp_2/static/media/growing-up-woman.227fa822.svg",
+    "static/media/mail.7252a114.svg": "/react_random_userapp_2/static/media/mail.7252a114.svg",
+    "static/media/man.a7e1ebbc.svg": "/react_random_userapp_2/static/media/man.a7e1ebbc.svg",
+    "static/media/map.336e15d4.svg": "/react_random_userapp_2/static/media/map.336e15d4.svg",
+    "static/media/padlock.04f6dd43.svg": "/react_random_userapp_2/static/media/padlock.04f6dd43.svg",
+    "static/media/phone.0e84da6a.svg": "/react_random_userapp_2/static/media/phone.0e84da6a.svg",
+    "static/media/woman.197fd20d.svg": "/react_random_userapp_2/static/media/woman.197fd20d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6461c03f.js",
-    "static/js/2.73c8468b.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.e66c6de2.chunk.js"
+    "static/js/runtime-main.5d34e7ed.js",
+    "static/js/2.cbf133f8.chunk.js",
+    "static/css/main.ef0be8ac.chunk.css",
+    "static/js/main.363db1c0.chunk.js"
   ]
 }

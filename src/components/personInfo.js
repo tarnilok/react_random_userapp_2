@@ -12,24 +12,31 @@ import ButtonandTable from "./buttonandTable";
 import {useState, useEffect} from "react";
 import "../design/personInfo.css"
 
-
 function PersonInfo() {
-const [fetchPerson, setFetchPerson] = useState("")
+const [fetchPerson, setFetchPerson] = useState(false)
 const [text1, setText1] = useState(false)
 const [text2, setText2] = useState(false)
+const [loading, setLoading] = useState(false)
 
-
-const apiFetcher = () => {
-    axios.get("https://randomuser.me/api/")
+const apiFetcher = async () => {
+  try {
+    await axios.get("https://randomuser.me/api/")
     .then(response => {
-        console.log(response.data.results[0])
-        setFetchPerson(response.data.results[0])
+      console.log(response?.data?.results[0]) 
+      setFetchPerson(response?.data?.results[0]);
     })
+   
+    setLoading(true)
+  }
+  catch (e) {
+    console.log(e)
+  }
+  console.log(fetchPerson)
 }
+
 useEffect(() => {
   apiFetcher()
-
-}, [])
+},[])
 
 const svgHoverText = (e) => {
   if (e.target.className ==="person svg") {setText1("My name is");setText2(`${fetchPerson?.name?.first} ${fetchPerson?.name?.last}`)}
@@ -38,15 +45,15 @@ const svgHoverText = (e) => {
   if (e.target.className === "map svg") {setText1("I live in"); setText2(fetchPerson?.location?.country)}
   if (e.target.className === "phone svg") {setText1("My phone number is"); setText2(fetchPerson?.phone)}
   if (e.target.className === "padlock svg") {setText1("My password is"); setText2(fetchPerson?.login?.password)}
-  // console.log(e.target.className) 
+  // console.log(e.target.className)
 }
 
   return (
     <div className="card">
       <nav className="navbar2"></nav>
-      <img src={fetchPerson?.picture?.large} alt="passport" className="image" />
-      <div className="personinfo text1">{text1 ? text1 : "My name is"}</div>
-      <div className="personinfo text2">{text2 ? text2 : `${fetchPerson?.name?.first} ${fetchPerson?.name?.last}`}</div>
+      <img src={fetchPerson?.picture?.large} alt="passport" className="image"/>
+      <div className="personinfo text1">{text1}</div>
+      <div className="personinfo text2">{text2}</div>
       <div className="svgcontainer">
         <img src={fetchPerson?.gender === "female" ? woman : man} alt="human" className="person svg" onMouseOver={svgHoverText} />
         <img src={mail} alt="mail" className="mail svg" onMouseOver={svgHoverText}/>
@@ -55,9 +62,8 @@ const svgHoverText = (e) => {
         <img src={phone} alt="phone" className="phone svg" onMouseOver={svgHoverText}/>
         <img src={padlock} alt="padlock" className="padlock svg" onMouseOver={svgHoverText}/>
       </div>
-      <ButtonandTable apiFetcher = {apiFetcher}/>
+      <ButtonandTable apiFetcher = {apiFetcher} loading={loading} fetchPerson={fetchPerson}/>
     </div>
   );
 }
-
 export default PersonInfo;

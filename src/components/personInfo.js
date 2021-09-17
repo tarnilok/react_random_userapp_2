@@ -13,9 +13,9 @@ import {useState, useEffect} from "react";
 import "../design/personInfo.css"
 
 function PersonInfo() {
-const [fetchPerson, setFetchPerson] = useState(false)
-const [text1, setText1] = useState(false)
-const [text2, setText2] = useState(false)
+const [fetchPerson, setFetchPerson] = useState("")
+const [text1, setText1] = useState("")
+const [text2, setText2] = useState("")
 const [loading, setLoading] = useState(false)
 
 const apiFetcher = async () => {
@@ -25,17 +25,16 @@ const apiFetcher = async () => {
       console.log(response?.data?.results[0]) 
       setFetchPerson(response?.data?.results[0]);
     })
-   
     setLoading(true)
   }
   catch (e) {
     console.log(e)
   }
-  console.log(fetchPerson)
 }
 
 useEffect(() => {
   apiFetcher()
+
 },[])
 
 const svgHoverText = (e) => {
@@ -52,8 +51,8 @@ const svgHoverText = (e) => {
     <div className="card">
       <nav className="navbar2"></nav>
       <img src={fetchPerson?.picture?.large} alt="passport" className="image"/>
-      <div className="personinfo text1">{text1}</div>
-      <div className="personinfo text2">{text2}</div>
+      <div className="personinfo text1">{text1 || setText1("My name is")}</div>
+      <div className="personinfo text2">{text2 || (fetchPerson ? setText2(`${fetchPerson?.name?.first} ${fetchPerson?.name?.last}`) : null)}</div>
       <div className="svgcontainer">
         <img src={fetchPerson?.gender === "female" ? woman : man} alt="human" className="person svg" onMouseOver={svgHoverText} />
         <img src={mail} alt="mail" className="mail svg" onMouseOver={svgHoverText}/>

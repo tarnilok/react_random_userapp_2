@@ -13,7 +13,7 @@ import {useState, useEffect} from "react";
 import "../design/personInfo.css"
 
 function PersonInfo() {
-const [fetchPerson, setFetchPerson] = useState("")
+const [fetchPerson, setFetchPerson] = useState(!{})
 const [text1, setText1] = useState("")
 const [text2, setText2] = useState("")
 const [loading, setLoading] = useState(false)
